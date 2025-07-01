@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/*TOP*/
+div.text{
+  font-size: 15px;
+}
+div.name{
+  font-size: 12px;
+}
+
+#send-message {
+color: Cyan;
+background-color: transparent;
+width: 50px;
+font-size: 30px;
+
+}
+/*GGGG*/
+div.screen.chat-screen.active {
+background-color: transparent;
+border: none;
+z-index: 2;
+}
+#username{
+background: white;
+color: #fff;
+border-radius: 5px;
+border: 1px solid black;
+color: black;
+width: 250px;
+}
+/*INPUT SA LOOB*/
+#message-input{
+margin-left: 10px;
+border-radius: 20px;
+placeholder-margin-left: 20px;
+background-color: #C5C5C5;
+border: none;
+outline: none;
+caret-color: yellow;
+color: black;
+
+
+}
+
+/*H2*/
+.screen h2 {
+margin-bottom: 100px;
+font-size: 30px;
+padding: 5px 0px;
+text-align: center;
+  color: transparent;
+    background-image: linear-gradient(to left, #FFD700, #7B68EE, #3498db, #2ecc71, #FFD700);
+     webkit-background-clip: text;
+      background-clip: text;
+    animation: color 3s linear infinite; 
+    background-size: 500%;  
+    -webkit-transform: translate3d(0,0,0);
+      -webkit-backface-visibility: hidden;
+  }
+  @keyframes color {
+    from { 
+      background-position: 0% 50%;
+    }
+    to { 
+      background-position: 100% 50%; 
+    }
+}
+
+body {
+  /*font-family: "Roboto", sans-serif;*/
+  font-family: 'Fredoka One', cursive;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 550px;
+  background-image: url('https://i.ibb.co/PR4WJQD/IMG-0704.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  top: 0;
+}
+
+.app > .screen {
+  display: none;
+}
+
+.app > .screen.active {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/*FORM MAIN*/
+.screen .form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.screen .form-input {
+  width: 100%;
+  margin: 20px 0px;
+}
+.screen .form-input label {
+  display: block;
+  margin-bottom: 3px;
+  color: YELLOWGREEN;
+}
+/*INPUT*/
+.screen .form-input input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #555;
+  font-size: 15px;
+  background: transparent;
+  color: black;
+  border-radius: 10px;
+}
+
+.screen .form-input button {
+  display: block;
+  margin: 0 auto; /* Add this line to center the button horizontally */
+  padding: 10px 20px;
+  background: GRAY;
+  color: black;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/*BUTTON 1ST PAGE
+.screen .form-input button {
+  display: block;
+  padding: 10px 20px;
+  background: GRAY;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+*/
+
+.chat-screen .header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  background: linear-gradient(to bottom, #96d35f, #263e0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: VERDANA;
+}
+
+.chat-screen .header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 2px 3px darkblue;
+}
+/*EDITED*/
+.chat-screen .header button {
+  padding: 5px 10px;
+  border: none;
+  background: none;
+  color: BLACK;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.chat-screen .messages {
+  width: 100%;
+  height: calc(100% - 120px); /* Adjusted height */
+  background-image: url('https://i.ibb.co/PR4WJQD/IMG-0704.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: auto;
+  position: relative;
+
+}
+.chat-screen .messages .message {
+  display: flex;
+  padding: 10px;
+}
+
+.chat-screen .messages .message > div {
+  max-width: 80%;
+  background: #fff;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+}
+
+.chat-screen .messages .message.my-message {
+  justify-content: flex-end;
+}
+
+.chat-screen .messages .message.other-message {
+  justify-content: flex-start;
+}
+/*##*/
+.chat-screen .messages .message .name {
+  font-size: 12px;
+  color: #707070;
+  margin-bottom: 5px;
+
+}
+
+.chat-screen .messages .message .text {
+  word-wrap: break-word;
+}
+
+.chat-screen .messages .update {
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+ border-radius: 5px;
+}
+
+.chat-screen .typebox {
+  width: 100%;
+  height: 50px; /* Adjusted height */
+  display: flex;
+  position: absolute;
+  bottom: 5px; /* Adjusted position */
+}
+
+.chat-screen .typebox input {
+  flex: 1;
+  height: 100%; /* Adjusted height */
+  font-size: 18px;
+}
+.chat-screen .typebox button {
+  width: 80px;
+  height: 100%; /* Adjusted height */
+  color: #eee;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  .app {
+      max-width: none;
+      max-height: none;
+      border: none;
+  }
+
+  .app > .screen {
+      width: 100%;
+  }
+
+  .screen .form {
+      width: 90%;
+  }
+
+  .chat-screen .header {
+      padding: 0px 10px;
+  }
+
+  .typebox input {
+      font-size: 14px;
+  }
+
+  .typebox button {
+      font-size: 14px;
+      width: 60px;
+  }
